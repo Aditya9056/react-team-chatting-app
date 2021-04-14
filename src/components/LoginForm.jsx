@@ -1,14 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import styled, {keyframes} from 'styled-components';
 import { bounce } from 'react-animations';
 import confetti from 'canvas-confetti';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
+// Confetti stuff
 const BounceEffect = styled.div`
 	animation: 2s ${keyframes`${bounce}`} infinite;
 `;
 
+// Notification stuff
+toast.configure();
+
 const LoginForm = () => {
+
+    // Notification with login details
+    useEffect(() => {
+        toast('User1: Skylar & Password: password123');
+        toast('User2: Mark & Password: password123');
+    }, []);
 
     // Confetti Animation
     let duration = 5 * 1000;
@@ -90,4 +102,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm;
+export default LoginForm

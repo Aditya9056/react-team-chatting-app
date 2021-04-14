@@ -1,7 +1,5 @@
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-// import { ChatList } from 'react-chat-engine';
-// import { ChatCard } from 'react-chat-engine';
 
 const someList = (props) => {
 
