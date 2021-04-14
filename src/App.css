@@ -1,3 +1,4 @@
+
 CHAT STYLES
 * {
     font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -7,25 +8,39 @@ CHAT STYLES
   }
   
   .ce-chat-list {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: #212121!important;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden!important;
   }
   
   .ce-chats-container {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: #212121!important;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 15px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+  }
+  .ce-chat-unread-dot{
+    margin-left: 10px;
   }
   
   .ce-active-chat-card {
-    background-color: #cabcdc !important;
-    border: 4px solid #cabcdc !important;
+    background-color: #111111 !important;
+    border: 4px solid #111111 !important;
     border-radius: 0px !important;
   }
-  
+
   .ce-chat-subtitle-text {
     color: #595959 !important;
   }
   
   .ce-chat-form-container {
-    padding-bottom: 20px !important;
+    background-color: #212121!important;
+    color: #fff;
+    padding-bottom: 15px !important;
   }
   
   .ce-text-input {
@@ -35,7 +50,8 @@ CHAT STYLES
   
   .ce-primary-button {
     border-radius: 6px !important;
-    background-color: #7554a0 !important;
+    background-color: white !important;
+    color: #111111 !important;
     position: relative;
     bottom: 1px;
   }
@@ -46,7 +62,8 @@ CHAT STYLES
   }
   
   .ce-settings {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: #212121!important;
+    color: white!important;
   }
   
   .ce-autocomplete-input {
@@ -67,14 +84,15 @@ CHAT STYLES
   .ce-chat-avatars-row {
     display: none !important;
   }
+
   
   /* CUSTOM FEED */
   
   .chat-feed {
     height: 100%;
     width: 100%;
-    overflow: scroll;
-    background-color: rgb(240, 240, 240);
+    overflow: hidden;
+    background-color: #212121;
   }
   
   .chat-title-container {
@@ -84,16 +102,20 @@ CHAT STYLES
   }
   
   .chat-title {
-    color: #7554a0;
+    color: #FFFFFF;
     font-weight: 800;
     font-size: 24px;
   }
   
   .chat-subtitle {
-    color: #7554a0;
+    color: #FFFFFF;
     font-weight: 600;
     font-size: 12px;
     padding-top: 4px;
+  }
+
+  .chat-sub-title{
+    color: #FFFFFF;
   }
   
   .message-row {
@@ -124,6 +146,8 @@ CHAT STYLES
     font-size: 16px;
     border-radius: 6px;
     max-width: 60%;
+    background-color: white!important;
+    color: black!important;
   }
   
   .message-image {
@@ -156,39 +180,41 @@ CHAT STYLES
   .message-form-container {
     position: absolute;
     bottom: 0px;
-    width: calc(100% - 36px);
+    width: calc(100% - 10px);
     padding: 18px;
-    background-color: rgb(240, 240, 240);
+    background-color: #212121;
   }
-  
+   
   .message-form {
     overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid #3b2a50;
-    background-color: white;
+    /* padding: 10px; */
+    /* border: 2px solid red; */
   }
   
   .message-input {
-    height: 40px;
-    width: calc(100% - 132px);
-    background-color: white;
-    border: 1px solid white;
+    height: 44px;
+    width: calc(100% - 104px);
+    background-color: #ffffff;
+    border: 1px solid #3b2a50;
     padding: 0px 18px;
     outline: none;
     font-size: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   
   .image-button {
+    display: inline-block;
+    background-color: #ffffff;
     cursor: pointer;
-    padding: 0px 12px;
-    height: 100%;
+    padding: 11px 18px;
+    height: 42px;
   }
   
   .send-button {
-    height: 42px;
-    background-color: white;
-    border: 1px solid white;
-    padding: 0px 18px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid #212121;
+    padding: 14px 18px;
     cursor: pointer;
   }
   
@@ -201,24 +227,24 @@ CHAT STYLES
   .picture-icon {
     top: 1px;
     position: relative;
-    font-size: 14px;
+    /* font-size: 14px; */
   }
   
   /* FORM STYLES */
   *,
   *::after,
   *::before {
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 62,5%;
   }
-  
   .wrapper {
+    font-family: "Montserrat", sans-serif;
     height: 100vh;
-      width: 100%;
-    background: rgb(117,84,160);
-    background: linear-gradient(90deg, rgba(117,84,160,1) 7%, rgba(117,84,160,1) 17%, rgba(106,95,168,1) 29%, rgba(99,103,174,1) 44%, rgba(87,116,184,1) 66%, rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);  
+    width: 100%;
+    background: #111111;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +253,7 @@ CHAT STYLES
   .input {
     color: #333;
     font-size: 1.2rem;
-      margin: 0 auto;
+    margin: 0 auto;
     padding: 1.5rem 2rem;
     border-radius: 0.2rem;
     background-color: rgb(255, 255, 255);
@@ -238,6 +264,7 @@ CHAT STYLES
     transition: all 0.3s;
     outline: none;
     margin-bottom: 25px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
   }
   
   .form {
@@ -255,9 +282,10 @@ CHAT STYLES
   .button {
     border-radius: 4px;
     border: none;
-    background-color: white;
-    color: black;
+    background-color: #3D9970;
+    color: #FFFFFF;
     text-align: center;
+    font-weight: 550;
     text-transform: uppercase;
     font-size: 22px;
     padding: 20px;
@@ -266,6 +294,7 @@ CHAT STYLES
     cursor: pointer;
     margin: 5px;
     width: 90%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
   }
   .button span {
     cursor: pointer;
@@ -287,4 +316,23 @@ CHAT STYLES
   .button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+  .input:active, .button:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  /* Side Hover */
+  .ce-section-title-container:hover, .ce-person-title-container:hover{
+    background-color: #707070!important;
+  }
+
+  /* Simplebar stuff */
+  .simplebar-track.simplebar-horizontal {
+    display: none;
+  }
+  .simplebar-content {
+    overflow-x: hidden;
+  }
+  .simplebar-scrollbar::before {
+    background-color: #707070;
   }

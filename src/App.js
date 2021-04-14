@@ -1,6 +1,7 @@
 import { ChatEngine } from 'react-chat-engine';
 import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
+// import ChatList from './components/ChatList';
 import './App.css';
 
 const App = () => {
@@ -14,16 +15,9 @@ const App = () => {
 			projectID='c8f3b689-8e0f-48a5-8e72-f3e0388e7c4d'
 			userName={localStorage.getItem('username')}
 			userSecret={localStorage.getItem('password')}
-			onNewMessage={() => (
-				<audio className='audio-element'>
-					<source src='https://proxy.notificationsounds.com/message-tones/take-this-313/download/file-sounds-809-take-this.mp3'></source>
-				</audio>
-			)}
-			onConnect={() => (
-				<audio className='audio-element'>
-					<source src='https://proxy.notificationsounds.com/message-tones/take-this-313/download/file-sounds-809-take-this.mp3'></source>
-				</audio>
-			)}
+			onNewMessage={() =>
+				document.getElementsByClassName('audio-element')[0].play()
+			}
 			renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
 		/>
 	);

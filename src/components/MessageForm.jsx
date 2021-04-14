@@ -36,6 +36,7 @@ const MessageForm = (props) => {
             onChange={handleChange}
             onSumbit={handleSubmit}
             />
+
             <label htmlFor="upload-button">
                 <span className="image-button">
                     <PictureOutlined className="picture-icon"/>
